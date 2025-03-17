@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="styles/index.scss" />
-    <title>Vite App</title>
+    <title>Cloudinary Thumbnail Generator</title>
 
     <!-- favicon -->
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
@@ -35,8 +35,33 @@
     <meta property="og:image" content="" />
   </head>
   <body>
-    <main>
-      <h1>Hello Vite</h1>
+    <main class="c-main">
+      <h1>Cloudinary Thumbnail Generator</h1>
+
+      <form class="c-form" data-form>
+        <input
+          type="url"
+          name="url"
+          placeholder="Enter your image URL"
+          required
+        />
+        <input
+          type="number"
+          name="time"
+          placeholder="Enter the specific time in seconds"
+          value="0"
+        />
+
+        <button>Generate Thumbnail</button>
+      </form>
+
+      <div data-result>
+        <div class="c-buttons">
+          <button data-download>Download</button>
+          <button data-copy>Copy</button>
+        </div>
+        <img data-result-image src="" />
+      </div>
     </main>
     <script type="module" src="/js/index.js"></script>
   </body>

@@ -1,15 +1,53 @@
-@import "utils/breakpoints";
-@import "utils/mixins";
-@import "utils/functions";
+body,
+html {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
-@import "core/variables";
-@import "core/reset";
-@import "core/globals";
-@import "core/fonts";
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
 
-@import "shared/links";
-@import "shared/layout";
-@import "shared/sections";
-@import "shared/fonts";
+body {
+  font-family: "Inter", sans-serif;
+}
 
-@import "components/button";
+.c-main {
+  padding: 32px;
+}
+
+.c-form {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 32px;
+  input {
+    flex: 1;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+}
+
+img {
+  max-width: 100%;
+}
+
+button,
+a {
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background-color: #000;
+  color: #fff;
+  border-radius: 8px;
+  text-decoration: none;
+}
+
+.c-buttons {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 16px;
+}
